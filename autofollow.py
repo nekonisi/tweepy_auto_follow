@@ -6,19 +6,6 @@ def main():
     api = get_api()
     client = get_client()
     me = client.get_me()
-    # keywords = ["#駆け出しエンジニアとつながりたい",
-    #             "#ブログ初心者",
-    #             "#ブログ仲間募集中",
-    #             "#ブログ仲間とつながりたい"]
-    # for keyword in keywords:
-    #     print(keyword)
-    #     results = api.search_tweets(keyword)
-    #     for result in results:
-    #         user = result.user
-    #         friendship = api.get_friendship(source_id = me.data.id, target_id = user.id)
-    #         if friendship[0].following == False:
-    #             print(user.id)
-    #             # api.create_friendship(user_id = user.id)
     keyword = sys.argv[1]
     results = api.search_tweets(keyword)
     for result in results:
