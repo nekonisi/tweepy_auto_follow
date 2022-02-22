@@ -10,7 +10,12 @@ Twitterの自動フォロースクリプトです。
  
 ```bash
 pip install requirement.txt
+mv config.ini.example config.ini
 ```
+
+※ config.iniの編集が必須です。
+詳細に関しては、
+[こちら](https://nekonisi.com/autofollow)をご確認ください
  
 # Usage
   
