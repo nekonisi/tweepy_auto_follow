@@ -1,7 +1,14 @@
-# tweepy_auto_follow
+# twitter_automation
+Twitter運用の自動化スクリプト集です。
+
+## comands
+### auto_follow
 Twitterの自動フォロースクリプトです。
-気になる単語を指定するだけで、関連するユーザを自動フォローします。
- 
+第一引数に気になる単語を指定するだけで、関連するユーザを自動フォローします。
+
+### auto_unfollow
+片思い（自分がフォローしているが、相手がフォローしていない状態）を解消します。
+
 # Requirement
 
 * Python 3.X.X
@@ -20,7 +27,8 @@ mv config.ini.example config.ini
 # Usage
   
 ```bash
-python autofollow {search_words}
+./auto_follow {search_words}
+./auto_unfollow
 ```
  
 # Note
