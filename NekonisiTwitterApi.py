@@ -34,5 +34,4 @@ class NekonisiTwitterApi:
             user = result.user
             friendship = self.api.get_friendship(source_id = self.me.data.id, target_id = user.id)
             if friendship[0].following == False:
-                api.create_friendship(user_id = user.id)
-                print(user.id)
+                self.api.create_friendship(user_id = user.id)
