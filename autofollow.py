@@ -1,5 +1,5 @@
 # coding: utf-8
-import configparser, tweepy, time, sys
+import configparser, tweepy, sys
 
 def main():
     init()
