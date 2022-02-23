@@ -35,3 +35,12 @@ class NekonisiTwitterApi:
             friendship = self.api.get_friendship(source_id = self.me.data.id, target_id = user.id)
             if friendship[0].following == False:
                 self.api.create_friendship(user_id = user.id)
+    
+    def auto_unfollow(self):
+        """Auto unfollow users
+        Goodbye! unrequited love!
+        """
+        for friend_id in self.api.get_friend_ids():
+            friendship = self.api.get_friendship(source_id = self.me.data.id, target_id = friend_id)
+            if friendship[0].followed_by == False:
+                self.api.destroy_friendship(user_id = friend_id)
